@@ -189,7 +189,8 @@ This will:
 - Serve the React frontend from Nginx on port `3001`
 - Run the Spring Boot backend on port `8081`
 
-> 🔗 Frontend: http://localhost:3001
+> 🔗 Frontend: http://localhost:3001 
+> <br>
 > 🔗 Backend: http://localhost:8081
 
 ### 📁 Docker Overview
@@ -219,4 +220,4 @@ This project is open-source and available under the MIT License.
 
 **Simon Hu**
 
-GitHub: @Spicysimonroll
+GitHub: [Spicysimonroll](https://github.com/Spicysimonroll)
