@@ -1,0 +1,42 @@
+services:
+  database:
+    container_name: open-meteo-db
+    image: mysql:8.0.36
+    restart: always
+    environment:
+      MYSQL_DATABASE: open_meteo
+      MYSQL_ROOT_PASSWORD: supersecret
+      MYSQL_USER: user
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+
+  backend:
+    container_name: open-meteo-be
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    depends_on:
+      - database
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/open_meteo
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: secret
+  frontend:
+    container_name: open-meteo-fe
+    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysqldata:

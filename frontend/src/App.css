@@ -1,0 +1,28 @@
+.app-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.controls {
+  margin-bottom: 1rem;
+}
+
+.controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.controls button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+}
+
+.chart-container {
+  margin-top: 2rem;
+}

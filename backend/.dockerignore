@@ -1,0 +1,44 @@
+# === Maven build output ===
+target/
+build/
+
+# === Logs and temp files ===
+*.log
+*.tmp
+hs_err_pid*
+*.out
+
+# === IDE/project files ===
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+*.iml
+*.ipr
+*.iws
+
+# === OS/system files ===
+.DS_Store
+Thumbs.db
+
+# === Git ===
+.git
+.gitignore
+
+# === Environment files ===
+.env
+.env.*
+application-local.properties
+application-local.yml
+!.env.template
+
+# === Test reports ===
+.surefire-reports/
+.jacoco/
+**/jacoco.exec
+
+# === Maven Wrapper (optional) ===
+.mvn/
+mvnw
+mvnw.cmd

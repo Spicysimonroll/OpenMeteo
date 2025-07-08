@@ -1,0 +1,136 @@
+# =====================================================
+# .gitignore for Full Stack Project: Spring Boot + React + Docker
+# Folder structure:
+# - backend/   → Java Spring Boot (Maven)
+# - frontend/  → React (Node.js)
+# =====================================================
+
+# =========================
+# === Global OS files ====
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# === IDE Config Files ===
+# =========================
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# =========================
+# === Backend: Spring Boot (Maven)
+# =========================
+/backend/target/
+/backend/build/
+**/target/
+**/build/
+
+# Maven Wrapper (keep scripts and wrapper JARs)
+/backend/.mvn/
+!/backend/.mvn/wrapper/maven-wrapper.jar
+!/backend/.mvn/wrapper/maven-wrapper.properties
+!/backend/mvnw
+!/backend/mvnw.cmd
+
+# Logs and reports
+/backend/*.log
+/backend/spring.log
+/backend/.surefire-reports/
+/backend/.jacoco/
+**/jacoco.exec
+
+# Generated
+/backend/generated/
+
+# Local environment config (optional)
+backend/application-local.properties
+backend/application-local.yml
+
+# Certificates and secrets
+/backend/*.keystore
+/backend/*.pem
+/backend/*.jks
+/backend/*.p12
+/backend/*.crt
+/backend/*.key
+/backend/*.der
+
+# Swagger/OpenAPI generated docs
+/backend/**/swagger-ui/
+/backend/**/api-docs/
+
+# =========================
+# === Frontend: React
+# =========================
+/frontend/node_modules/
+/frontend/.env
+/frontend/.env.*          # except template
+!/frontend/.env.template
+
+/frontend/.cache/
+/frontend/.next/          # if using Next.js
+/frontend/.turbo/         # TurboRepo
+/frontend/.vite/
+/frontend/.parcel-cache/
+frontend/.eslintcache
+
+/frontend/dist/
+/frontend/build/
+/frontend/coverage/
+
+# Log files and locks
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/package-lock.json
+/frontend/pnpm-lock.yaml
+/frontend/yarn.lock
+
+# Editor temp files
+/frontend/*.swp
+/frontend/*.swo
+
+# =========================
+# === Docker
+# =========================
+
+# Docker environment files
+*.env
+.env.*
+!.env.template
+
+# Docker Compose overrides (dev/local only)
+docker-compose.override.yml
+docker-compose.*.override.yml
+
+# Docker volume mount paths
+**/docker-volume/
+**/.docker/
+
+# Docker build output (optional if building locally)
+**/build/
+**/target/

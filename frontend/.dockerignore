@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.pnpm/
+.yarn/
+.cache/
+.parcel-cache/
+
+# Build output
+build/
+dist/
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Environment
+.env
+.env.*
+!.env.template
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Git
+.git
+.gitignore
